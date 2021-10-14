@@ -1,0 +1,38 @@
+@each $name, $color in $colors {
+  .text_#{$name} {
+    color: $color;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h6,
+h6 {
+  line-height: 1.2;
+}
+h1 {
+  font-size: 40px;
+  @media screen and (max-width: $sm) {
+    font-size: 40px;
+  }
+}
+
+h2 {
+  font-size: 45px;
+  @media screen and (max-width: $sm) {
+    font-size: 45px;
+  }
+}
+
+.text_muted {
+  color: #a9a9a9;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.text_black {
+  color: #0c261c;
+}

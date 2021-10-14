@@ -1,0 +1,23 @@
+.form-input {
+  display: block;
+  width: 100%;
+  padding: 0.7rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 100;
+  font-family: $font_family;
+  color: $font-color;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  color: $font_color;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 1.5rem;
+  background-size: 20px;
+}
+
+.hideLabel {
+  margin-left: -99999999;
+  visibility: hidden;
+  position: absolute;
+}

@@ -1,0 +1,18 @@
+button {
+  padding: 10px 20px;
+  font-family: $font_family;
+  font-weight: 300;
+  background-color: transparent;
+  text-align: center;
+  border-radius: 3rem;
+  &._100 {
+    width: 100%;
+  }
+}
+
+@each $name, $color in $colors {
+  .btn_outline_#{$name} {
+    border: 1px solid $color;
+    color: $color;
+  }
+}
