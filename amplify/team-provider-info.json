@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-xerpay-dev-141742-authRole",
+      "UnauthRoleArn": "arn:aws:iam::025990721554:role/amplify-xerpay-dev-141742-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::025990721554:role/amplify-xerpay-dev-141742-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-xerpay-dev-141742-deployment",
+      "UnauthRoleName": "amplify-xerpay-dev-141742-unauthRole",
+      "StackName": "amplify-xerpay-dev-141742",
+      "StackId": "arn:aws:cloudformation:us-west-2:025990721554:stack/amplify-xerpay-dev-141742/d1b4af50-2ddb-11ec-af35-0a48f3019cbd",
+      "AmplifyAppId": "dld6v7vwzp4fs"
+    }
+  }
+}
