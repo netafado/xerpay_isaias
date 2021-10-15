@@ -1,11 +1,10 @@
 import React from "react";
 import SearchPage from "./pages/search/search";
+import Result from "./pages/result";
 function App() {
   return (
     <div className="App xerpayTest">
-      <header className="App-header">
-        <SearchPage />
-      </header>
+      <Result />
     </div>
   );
 }

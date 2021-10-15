@@ -1,0 +1,50 @@
+header {
+  width: 100%;
+  padding: 0;
+  padding-bottom: 0;
+  background-color: white;
+  display: flex;
+  position: relative;
+  .row {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+  }
+  .close {
+    width: 30px;
+    height: 30px;
+    border: none;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+  }
+  .text-info {
+    flex: 1;
+    display: flex;
+  }
+  .cat-image {
+    max-width: 120px;
+    height: 40px;
+    margin-right: 10px;
+    bottom: -3px;
+    position: relative;
+  }
+  h1 {
+    margin: 0;
+    font-size: 30px;
+  }
+}
+
+.userBio,
+.userRepo {
+  padding: 15px;
+}
+
+.userBio {
+  width: 30%;
+  max-width: 320px;
+}
+
+.userRepo {
+  flex: 1;
+}

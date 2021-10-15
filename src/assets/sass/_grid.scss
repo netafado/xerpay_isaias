@@ -2,7 +2,9 @@
   $remValue: ($value / 16) + rem;
   @return $remValue;
 }
-
+.container {
+  width: 100%;
+}
 .row {
   display: flex;
   flex-wrap: wrap;
