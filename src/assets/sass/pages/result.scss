@@ -1,14 +1,11 @@
 header {
   width: 100%;
-  padding: 0;
   padding-bottom: 0;
   background-color: white;
   display: flex;
   position: relative;
   .row {
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 20px;
+    padding: 15px;
   }
   .close {
     width: 30px;

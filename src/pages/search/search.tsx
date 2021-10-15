@@ -3,9 +3,6 @@ import { useEffect, useRef, useState } from "react"
 import {RouteComponentProps, withRouter} from "react-router-dom"
 
 import catImage from "../../assets/img/cat.svg"
-
-
-
 const SearchPage = (props : RouteComponentProps) => {
 
     const [showInput, setShowInput] = useState(false)

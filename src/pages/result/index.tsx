@@ -1,13 +1,12 @@
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useState } from "react"
 import catImage from "../../assets/img/cat.svg"
 import client from "../../graphql/client"
 import { getUserAndRepositories } from "../../graphql/getInfo"
 import {UserInfoProps} from "../../types/userInfo"
 import UserInfo from "../../components/userInfo"
 import {RouteComponentProps, withRouter} from "react-router-dom"
-import { BrowserRouter } from 'react-router-dom';
-
+import NotFound from "../../components/notFound"
 import Loading from "../../components/loading"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
@@ -21,9 +20,6 @@ type RepoProps = {
     description: string | null
     url: string
 }
-
-
-
 
 
 const Result = ({history, match} : RouteComponentProps<{ user: string }>) => {
@@ -63,8 +59,7 @@ const Result = ({history, match} : RouteComponentProps<{ user: string }>) => {
                 <header>
                     <div className="row">
                         <div className="text-info">
-                            <img src={catImage} className="cat-image" alt="Gato roxo" />
-                            <h1 onClick={getData}>Resultado</h1>
+                            <h1 >Resultado</h1>
                         </div>
                     </div>
                     <button className="close" onClick={goBackHome}>
@@ -75,11 +70,7 @@ const Result = ({history, match} : RouteComponentProps<{ user: string }>) => {
                     {userInfo &&  <UserInfo {...userInfo} />}
                     <main className="userRepo">
                         <div className="card">
-                            {notFount && <>
-                            <h3>Nenhum usuário encontrado</h3>
-                            <button onClick={goBackHome} className="btn btn_outline_brand_one btn_wrraper">Voltar</button>
-                            </>}
-
+                            {notFount && <NotFound goBackHome={goBackHome} />}
                             <ul className="repo_list">
                                 {repos.map( (repo: RepoProps)=>{
                                     return(
