@@ -1,20 +1,32 @@
 
 import { useEffect, useRef, useState } from "react"
-import  "./search.scss"
+import {RouteComponentProps, withRouter} from "react-router-dom"
+
 import catImage from "../../assets/img/cat.svg"
-const SearchPage = () => {
+
+
+
+const SearchPage = (props : RouteComponentProps) => {
+
     const [showInput, setShowInput] = useState(false)
     const inputRef = useRef<HTMLInputElement>(null)
+    const [user, setUser] = useState("");
 
     const chagenState = ()=>{
         setShowInput(true)
-
     }
+
+    const goToResult = () =>{
+        if(!user) return
+        props.history.push( `/result/${user}` )
+    }
+
     useEffect(()=>{
         if (null !== inputRef.current) {
             inputRef.current.focus();
         }
     }, [showInput])
+
     return (
         <section id="search">
             <div className="container clearfix">
@@ -30,7 +42,8 @@ const SearchPage = () => {
                     <div className="card ">
                         <h1 className="text-center title">Nome do usuário ou apelido</h1>
                         <div className="row btn_wrraper">
-                            <input ref={inputRef}  className="form-input" type="text" name="search" placeholder={"Nome do usuário"} /> 
+                            <input ref={inputRef} value={user} onChange={(e: React.ChangeEvent<HTMLInputElement>)=> setUser(e.target.value)} className="form-input" type="text" name="search" placeholder={"Nome do usuário"} /> 
+                            <button onClick={goToResult} className="btn btn_outline_brand_one btn_wrraper">Procurar</button>
                         </div>
                     </div>
                     }                    
@@ -40,4 +53,4 @@ const SearchPage = () => {
     )
 }
 
-export default SearchPage
+export default withRouter(SearchPage)

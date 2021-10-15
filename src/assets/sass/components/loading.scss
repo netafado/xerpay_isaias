@@ -1,0 +1,22 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+}
+.loading {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  .cat_image {
+    margin-bottom: -12px;
+  }
+  .loading_content {
+    max-width: 160px;
+    h3 {
+      animation: fadeIn 1s infinite alternate;
+    }
+  }
+}
