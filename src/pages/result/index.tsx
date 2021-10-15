@@ -1,6 +1,5 @@
 
 import { useEffect, useState } from "react"
-import catImage from "../../assets/img/cat.svg"
 import client from "../../graphql/client"
 import { getUserAndRepositories } from "../../graphql/getInfo"
 import {UserInfoProps} from "../../types/userInfo"
@@ -8,8 +7,7 @@ import UserInfo from "../../components/userInfo"
 import {RouteComponentProps, withRouter} from "react-router-dom"
 import NotFound from "../../components/notFound"
 import Loading from "../../components/loading"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTimes } from '@fortawesome/free-solid-svg-icons'
+
 interface Node {
     node: object
 }
@@ -63,7 +61,7 @@ const Result = ({history, match} : RouteComponentProps<{ user: string }>) => {
                         </div>
                     </div>
                     <button className="close" onClick={goBackHome}>
-                        <FontAwesomeIcon icon={faTimes} />
+                        <i className="fas fa-times"></i>
                     </button>
                 </header>
                 <div className="row">
